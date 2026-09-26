@@ -4,7 +4,13 @@
    =========================================================== */
 
 
-
+:root{
+  /* dark navbar palette - untouched */
+  --nav-bg: rgba(15,13,9,0.94);
+  --nav-line: rgba(201,155,60,0.22);
+  --nav-line-strong: rgba(201,155,60,0.45);
+  --nav-text: #F4EEDF;
+  --nav-muted: #A79B82;
   /* brand gold - retained wherever it already appears */
   --gold-1: #F1D48A;
   --gold-2: #C89B3C;
