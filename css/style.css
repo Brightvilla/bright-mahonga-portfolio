@@ -3,7 +3,6 @@
    Stylesheet
    =========================================================== */
 
-
 :root{
   /* dark navbar palette - untouched */
   --nav-bg: rgba(15,13,9,0.94);
@@ -11,6 +10,7 @@
   --nav-line-strong: rgba(201,155,60,0.45);
   --nav-text: #F4EEDF;
   --nav-muted: #A79B82;
+
   /* brand gold - retained wherever it already appears */
   --gold-1: #F1D48A;
   --gold-2: #C89B3C;
@@ -84,8 +84,13 @@ nav.wrap{
   display:flex; align-items:center; justify-content:space-between;
   height: 100%;
 }
-.brand{ display:flex; align-items:center; }
-.brand img{ height: 34px; width:auto; border-radius: 8px; }
+.brand{ display:flex; align-items:center; gap:12px; }
+.brand-icon{ height: 34px; width: 34px; flex-shrink: 0; }
+.brand-word{
+  font-family:'Fraunces', serif; font-size: 21px; letter-spacing: 0.01em; font-weight: 600;
+  background: linear-gradient(115deg, #C4B5FD 0%, #9B5DE5 45%, #7C3AED 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
 .navlinks{ display:flex; gap:36px; }
 .navlinks a{
   font-size: 14px; color: var(--nav-muted); transition: color .2s ease;
@@ -109,16 +114,19 @@ nav.wrap{
 /* ---------- HERO ---------- */
 .hero{
   padding-top: 96px; padding-bottom: 96px;
-  display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items:center;
+  display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items:stretch;
   overflow: visible;
 }
+.hero > .reveal{ display:flex; height: 100%; }
 .hero-copy{
   border:1px solid var(--line); padding: 8px; border-radius: var(--radius);
   background: #fff; box-shadow: var(--shadow-soft);
+  width: 100%; display:flex;
 }
 .hero-copy-inner{
   border:1px solid var(--line); padding: 48px 42px; border-radius: calc(var(--radius) - 8px);
   background: linear-gradient(180deg, var(--purple-soft), transparent 55%);
+  width: 100%; display:flex; flex-direction:column; justify-content:center;
 }
 .kicker{
   font-size:13.5px; color: var(--gold-3); margin-bottom: 22px; display:flex; align-items:center; gap: 12px;
@@ -161,15 +169,15 @@ h1.headline em{
 }
 .hero-stats div span{ font-size: 12.5px; color: var(--muted); }
 
-.hero-photo-wrap{ position: relative; }
+.hero-photo-wrap{ position: relative; height: 100%; display:flex; }
 .hero-blob{
   position: absolute; width: 120%; height: 120%; top: -10%; left: -10%;
   background: radial-gradient(circle at 30% 30%, rgba(124,58,237,0.35), transparent 60%),
               radial-gradient(circle at 75% 70%, rgba(241,212,138,0.25), transparent 55%);
   filter: blur(40px); z-index: -1; border-radius: 50%;
 }
-.hero-photo-frame{ border:1px solid var(--line); padding: 12px; border-radius: var(--radius); background: #fff; box-shadow: var(--shadow-soft); }
-.hero-photo-frame .photo-box{ border:1px solid var(--line-strong); border-radius: calc(var(--radius) - 8px); overflow:hidden; aspect-ratio: 1/1; }
+.hero-photo-frame{ border:1px solid var(--line); padding: 12px; border-radius: var(--radius); background: #fff; box-shadow: var(--shadow-soft); width: 100%; display:flex; }
+.hero-photo-frame .photo-box{ border:1px solid var(--line-strong); border-radius: calc(var(--radius) - 8px); overflow:hidden; width: 100%; min-height: 420px; }
 .hero-photo-frame .photo-box img{ width:100%; height:100%; object-fit: cover; transition: transform .5s var(--ease); }
 .hero-photo-frame:hover .photo-box img{ transform: scale(1.04); }
 
@@ -298,7 +306,9 @@ textarea{ resize: vertical; min-height: 120px; }
 /* ---------- FOOTER (light theme) ---------- */
 footer{ border-top: 1px solid var(--line); padding: 48px 0; background: var(--bg-alt); }
 footer .foot-top{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
-.foot-brand img{ height:28px; border-radius: 6px; }
+.foot-brand{ display:flex; align-items:center; gap:10px; }
+.foot-brand .brand-icon{ height:28px; width:28px; }
+.foot-brand .brand-word{ font-size: 17px; }
 .foot-socials{ display:flex; gap:12px; }
 .foot-socials a{
   width:40px; height:40px; border:1px solid var(--line-strong); border-radius: var(--radius-sm);
@@ -317,6 +327,7 @@ footer .foot-bottom{ display:flex; align-items:center; justify-content:space-bet
   .navlinks{ display:none; }
   .menu-btn{ display:block; }
   .hero{ grid-template-columns: 1fr; padding-top: 48px; }
+  .hero-photo-frame .photo-box{ min-height: 320px; }
   .about-grid, .contact-grid{ grid-template-columns: 1fr; gap: 46px; }
   .contact-side{ border-top:1px solid var(--line); padding-top: 40px; }
   .skills-grid{ grid-template-columns: 1fr; gap: 28px; }

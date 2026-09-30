@@ -15,8 +15,19 @@
 
 <header>
   <nav class="wrap">
-    <a href="#top" class="brand">
-      <img src="../assets/images/nav_logo.png" alt="Villa — Website Developer logo">
+    <a href="#home" class="brand" aria-label="Villa — Website Developer">
+      <svg class="brand-icon" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <linearGradient id="navIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#C4B5FD"/>
+            <stop offset="45%" stop-color="#9B5DE5"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+        <rect x="8" y="8" width="84" height="84" rx="14" fill="none" stroke="url(#navIconGrad)" stroke-width="4.5"/>
+        <path d="M26 26 L50 74 L74 26" fill="none" stroke="url(#navIconGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-word">Villa</span>
     </a>
     <div class="navlinks">
       <a href="#home">Home</a>
@@ -41,7 +52,14 @@
 
   <!-- HOME / HERO -->
   <section class="hero" id="home">
-    <div id="top"></div>
+    <div class="hero-photo-wrap reveal">
+      <div class="hero-blob" aria-hidden="true"></div>
+      <div class="hero-photo-frame">
+        <div class="photo-box">
+          <img src="../assets/images/hero.jpg" alt="Portrait of Bright Villareal Mahonga">
+        </div>
+      </div>
+    </div>
     <div class="reveal">
       <div class="hero-copy">
         <div class="hero-copy-inner">
@@ -53,18 +71,10 @@
             <a href="../assets/Bright_Mahonga_Resume.pdf" class="btn btn-ghost" download>Download my CV</a>
           </div>
           <div class="hero-stats">
-            <div><strong>5+</strong><span>Years in tech</span></div>
+            <div><strong>6+</strong><span>Years in tech</span></div>
             <div><strong>4</strong><span>Certifications earned</span></div>
             <div><strong>12+</strong><span>Technologies mastered</span></div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-photo-wrap reveal">
-      <div class="hero-blob" aria-hidden="true"></div>
-      <div class="hero-photo-frame">
-        <div class="photo-box">
-          <img src="../assets/images/hero.jpg" alt="Portrait of Bright Villareal Mahonga">
         </div>
       </div>
     </div>
@@ -83,7 +93,7 @@
             <img src="../assets/images/about.jpg" alt="Bright Villareal Mahonga at work">
           </div>
           <div class="stat-row"><strong>2021</strong><span>Started in software &amp; tech</span></div>
-          <div class="stat-row"><strong>BSc</strong><span>Software Engineering, 2nd Class Honours</span></div>
+          <div class="stat-row"><strong>BSc</strong><span>Software Engineering, 2nd Class Honours Lower Division</span></div>
           <div class="stat-row"><strong>ISO 27001</strong><span>Certified in security auditing</span></div>
         </div>
         <div class="about-copy reveal">
@@ -180,8 +190,8 @@
         <div class="quote-mark">&ldquo;</div>
         <p class="quote">Professional, sharp, and refreshingly straightforward about timelines and cost. The finished site looks nothing like the generic templates we kept getting quoted elsewhere.</p>
         <div class="testi-person">
-          <div class="avatar-photo"><img src="../assets/images/testimonial-4.jpg" alt="Kevin Otieno"></div>
-          <div class="who"><strong>Kevin Otieno</strong><span>Owner, Otieno &amp; Co. Law</span></div>
+          <div class="avatar-photo"><img src="../assets/images/testimonial-4.jpg" alt="Adam Matthews"></div>
+          <div class="who"><strong>Adam Matthews</strong><span>Owner, Adams &amp; Co. Law</span></div>
         </div>
       </div>
     </div>
@@ -280,8 +290,19 @@
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <a href="#top" class="foot-brand">
-        <img src="../assets/images/nav_logo.png" alt="Villa">
+      <a href="#home" class="foot-brand" aria-label="Villa — Website Developer">
+        <svg class="brand-icon" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <linearGradient id="footIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C4B5FD"/>
+              <stop offset="45%" stop-color="#9B5DE5"/>
+              <stop offset="100%" stop-color="#7C3AED"/>
+            </linearGradient>
+          </defs>
+          <rect x="8" y="8" width="84" height="84" rx="14" fill="none" stroke="url(#footIconGrad)" stroke-width="4.5"/>
+          <path d="M26 26 L50 74 L74 26" fill="none" stroke="url(#footIconGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-word">Villa</span>
       </a>
       <div class="foot-socials" aria-label="Social links">
         <a href="https://www.linkedin.com/in/bright-villareal-mahonga-1054352b2" target="_blank" rel="noopener" aria-label="LinkedIn">
